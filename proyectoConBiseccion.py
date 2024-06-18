@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import messagebox
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-import numpy as np
 from scipy.optimize import bisect
 
 
