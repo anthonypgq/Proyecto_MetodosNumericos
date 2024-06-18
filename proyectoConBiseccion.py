@@ -4,16 +4,17 @@ from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from scipy.optimize import bisect
 
-
+# Función para calcular la tasa de interés usando el método de bisección
 def calcular_tasa_interes_biseccion():
     try:
-        # Obtención y validación de entradas
+        # Obtención y validación de entradas desde los campos de entrada
         deposito_inicial = float(entry_deposito_inicial.get())
         aportes = float(entry_aportes.get())
         valor_final = float(entry_valor_final.get())
         periodos = int(entry_periodos.get())
         frecuencia = combo_frecuencia.get()
 
+        # Verificación de valores mínimos de depósito inicial y aportes
         if deposito_inicial < 50 or aportes < 5:
             raise ValueError(
                 "El depósito inicial debe ser al menos 50 y los aportes al menos 5.")
@@ -41,6 +42,7 @@ def calcular_tasa_interes_biseccion():
         # Uso del método de la bisección para encontrar la raíz de la ecuación
         tasa_interes = bisect(ecuacion, 0, 1)
 
+        # Verificación de la validez de la tasa de interés encontrada
         if tasa_interes < 0:
             raise ValueError(
                 "No es posible alcanzar el valor final con las condiciones dadas.")
@@ -51,8 +53,6 @@ def calcular_tasa_interes_biseccion():
         messagebox.showerror("Error", str(e))
 
 # Función para mostrar el resultado
-
-
 def mostrar_resultado(tasa_interes):
     try:
         # Obtención de entradas
