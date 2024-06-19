@@ -20,10 +20,10 @@ pip install -r requirements.txt
 
 1. **Ejecutar el Script**
 
-    Ejecuta el archivo `AhorroMensual.py` para iniciar la aplicación de la calculadora de ahorros.
+    Ejecuta el archivo `Proyecto_Ahorro.py` para iniciar la aplicación de la calculadora de ahorros.
 
     ```bash
-    python AhorroMensual.py
+    python Proyecto_Ahorro.py
     ```
 
 2. **Interfaz de Usuario**
